@@ -9,3 +9,5 @@ Além disso, o sistema oferecerá um desconto de 30% ao cliente em sua primeira 
 
 Considerações Finais
 Nós, Lincon Mello e Diego Souto, desenvolvemos este trabalho com muita dedicação e carinho. É o início de um sonho para ambos. Embora seja um projeto pequeno, empenhamos muito esforço e dedicação. Agradecemos ao Professor José Luis Pagotto pelos ensinamentos!
+
+[Fluxograma Casa da Cultura.docx](https://github.com/user-attachments/files/15822887/Fluxograma.Casa.da.Cultura.docx)
