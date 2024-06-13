@@ -1,0 +1,88 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <stdbool.h> // Inclusão da biblioteca bool
+
+int main()
+{
+    char CADASTRO[4];
+    char NOME[30];
+    char RESPOSTA[4];
+    int CPF1;
+    int CPF;
+    int TELEFONE;
+    int IDADE;
+    int VALOR;
+    float INGRESSO;
+    bool NOVO_CADASTRO = true; // Variável booleana para verificar se deseja fazer novo cadastro
+
+    setlocale(LC_ALL, "Portuguese");
+
+    while (NOVO_CADASTRO)
+    {
+        printf("==OLÁ BOA NOITE! BEM VINDO A CASA DA CULTURA DE INDAIATUBA==\n\nO CLIENTE JA POSSUI CADASTRO?\n");
+        scanf("%s", &CADASTRO);
+
+        if (strcmp(CADASTRO, "SIM") == 0)
+        {
+	     system("cls"); 
+ 		 printf("OK, INSIRA O CPF DO CLIENTE!: \n");
+ 		 scanf("%d",&CPF1);
+ 		 printf("\nCPF CONFIRMADO, CLIENTE LIBERADO!\n\n");
+        }
+        else
+      {
+        printf("\nOK, GERAR CADASTRO\n\n");
+        system("pause");
+        system("cls");
+      
+	    
+        printf("PREENCHA OS DADOS:\n");
+        printf("\nNOME: ");
+        scanf("%s", &NOME);
+        
+        printf("\nCPF: ");
+        scanf("%d", &CPF);
+        
+        printf("\nIDADE:");
+        scanf("%d", &IDADE);
+
+        if (IDADE < 18)
+        {
+            printf("\nO CADASTRO NAO PODERÁ SER CONCLUIDO, POIS O CLIENTE AINDA É MENOR DE IDADE!\n\n");
+        }
+        else if (IDADE >= 18)
+        {
+            printf("\nTELEFONE P/ CONTATO:\n");
+            scanf("%d", &TELEFONE);
+
+            printf("\nIREMOS GERAR UM DESCONTO DE 30%% PELA PRIMEIRA VISITA DO CLIENTE:\n\nVALOR DO INGRESSO:");
+            scanf("%f", &INGRESSO);
+
+            VALOR = INGRESSO * 0.7;
+            
+            printf("\nO VALOR A SER PAGO PELO CLIENTE É DE: %d REAIS\n\n", VALOR);
+            
+            printf("APÓS O PAGAMENTO, O CLIENTE PODERÁ SER LIBERADO!\n\n");
+            system("pause");
+            system("cls");
+        }
+	  }
+        printf("DESEJA FAZER UM NOVO CADASTRO ? (SIM/NAO): ");
+        char RESPOSTA[4];
+        scanf("%s", &RESPOSTA);
+		printf("\n");
+		
+        if (strcmp(RESPOSTA, "NAO") == 0)
+        {
+           		 NOVO_CADASTRO = false;
+        }
+		
+		
+    system("pause");
+    system("cls");
+    }
+
+    return 0;
+}
